@@ -1,12 +1,11 @@
 ---
-type Props = {
+interface Props {
 	title?: string;
 	description?: string;
-};
-
+}
 const {
 	title = 'MetricTether — Intelligent Software & Agentic Workflows for Modern Businesses',
-	description = 'MetricTether builds intelligent, AI-agentic software tools that automate complex workflows—from churn intelligence to cashflow forecasting. Tether your metrics to autonomous action.',
+	description = 'MetricTether builds AI-agentic software tools that transform raw business telemetry into proactive automated workflows—from churn intelligence to cashflow forecasting.',
 } = Astro.props;
 ---
 
@@ -18,7 +17,6 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
@@ -27,25 +25,25 @@ const {
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://metrictether.com" />
-		<meta property="og:image" content="/og-image.png" />
+		<meta property="og:image" content="/og-image.svg" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content="/og-image.png" />
+		<meta name="twitter:image" content="/og-image.svg" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
 			rel="stylesheet"
 		/>
 
 		<script is:inline defer data-domain="metrictether.com" src="https://plausible.io/js/script.js"></script>
 	</head>
-	<body class="bg-[#0b0f17] text-[#94a3b8] font-body antialiased">
+	<body class="min-h-screen flex flex-col bg-[#0b0f17] text-[#94a3b8] font-body antialiased margin-0">
 		<slot />
 	</body>
 </html>
