@@ -1,0 +1,137 @@
+---
+---
+
+<section id="waitlist" class="py-20 relative">
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-12">
+			<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium text-[#38bdf8] bg-[#121826]/50 border border-[#334155]/50 mb-4">
+				Early Access
+			</div>
+			<h2 class="text-3xl sm:text-4xl font-heading font-bold text-[#f1f5f9] mb-4">
+				Be the First to Deploy MetricTether Agents
+			</h2>
+			<p class="text-[#94a3b8] max-w-2xl mx-auto">
+				Join a select group of early adopters getting priority access to autonomous revenue recovery
+				and cashflow stabilisation tools.
+			</p>
+		</div>
+
+		<div class="bg-[#121826]/50 border border-[#334155]/50 rounded-xl p-6 sm:p-8">
+			<form
+				action="https://formspree.io/f/maypwjnv"
+				method="POST"
+				class="space-y-6"
+				id="waitlist-form"
+			>
+				<input type="hidden" name="form-name" value="waitlist" />
+				<input type="hidden" name="_next" value="https://metrictether.com#waitlist-success" />
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+					<div>
+						<label for="name" class="block text-sm font-medium text-[#94a3b8] mb-1">Name</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] placeholder-[#64748b] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors"
+							placeholder="Jane Doe"
+						/>
+					</div>
+
+					<div>
+						<label for="email" class="block text-sm font-medium text-[#94a3b8] mb-1">Email Address</label>
+						<input
+							type="email"
+							id="email"
+							name="_replyto"
+							required
+							class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] placeholder-[#64748b] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors"
+							placeholder="jane@company.com"
+						/>
+					</div>
+				</div>
+
+				<div>
+					<label for="interest" class="block text-sm font-medium text-[#94a3b8] mb-1">Primary Interest</label>
+					<select
+						id="interest"
+						name="interest"
+						required
+						class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors"
+					>
+						<option value="" disabled selected>Select a product</option>
+						<option value="Churn Analytics">Churn Analytics — AI Email Interviewer</option>
+						<option value="FreelancerCashFlow">FreelancerCashFlow — Financial OS</option>
+						<option value="Custom AI Agents">Custom AI Agents Sandbox</option>
+					</select>
+				</div>
+
+				<div>
+					<label for="bottleneck" class="block text-sm font-medium text-[#94a3b8] mb-1">
+						What is your biggest operational or financial bottleneck?
+					</label>
+					<textarea
+						id="bottleneck"
+						name="bottleneck"
+						rows="3"
+						class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] placeholder-[#64748b] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors resize-y"
+						placeholder="e.g. Late payments from 30% of clients, or churn rate above 8% monthly..."
+					></textarea>
+				</div>
+
+				<div class="flex items-start gap-3">
+					<div class="flex-shrink-0 mt-0.5">
+						<input
+							type="checkbox"
+							id="consent"
+							name="consent"
+							value="yes"
+							required
+							class="w-4 h-4 rounded bg-[#0b0f17]/50 border-[#334155]/50 text-[#38bdf8] focus:ring-[#38bdf8]/30"
+						/>
+					</div>
+					<label for="consent" class="text-sm text-[#94a3b8]">
+						I agree to MetricTether contacting me. You can unsubscribe at any time.
+					</label>
+				</div>
+
+				<button
+					type="submit"
+					class="w-full bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(99,102,241,0.4)]"
+					type="submit"
+				>
+					Get Priority Access
+				</button>
+			</form>
+
+			<div id="waitlist-success" class="hidden text-center py-8">
+				<svg class="w-12 h-12 mx-auto text-[#10b981] mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+				<h3 class="text-xl font-heading font-bold text-[#f1f5f9] mb-2">Thanks for joining!</h3>
+				<p class="text-[#94a3b8]">We'll be in touch soon with early access details.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const form = document.getElementById('waitlist-form');
+	const success = document.getElementById('waitlist-success');
+	const hash = window.location.hash;
+
+	if (hash === '#waitlist-success' && success) {
+		form?.classList.add('hidden');
+		success.classList.remove('hidden');
+		window.history.replaceState(null, '', '#waitlist');
+	}
+
+	if (form && success) {
+		form.addEventListener('submit', () => {
+			form.classList.add('hidden');
+			success.classList.remove('hidden');
+			success.scrollIntoView({ behavior: 'smooth' });
+		});
+	}
+</script>

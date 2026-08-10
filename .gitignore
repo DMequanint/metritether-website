@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+.vercel/
+.server/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V600:annot
+.Evidence/
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Testing
+playwright-report/
+test-results/
+.coverage
+.nyc_output/
+
+# Misc
+.cache/
+.temp/
+.temp-*
+.cache/

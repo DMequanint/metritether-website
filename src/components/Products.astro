@@ -1,0 +1,219 @@
+---
+interface Product {
+	id: string;
+	title: string;
+	tagline: string;
+	description: string;
+	features: string[];
+	accentColor: string;
+	icon: 'churn' | 'cashflow' | 'sandbox';
+}
+
+const products: Product[] = [
+	{
+		id: 'churn',
+		title: 'Churn Analytics',
+		tagline: 'Turn Exit Surveys into Conversational Insights.',
+		description:
+			'An autonomous AI interviewer agent triggers upon customer cancellation in SaaS and subscription businesses. It sends personalised, context-aware email replies asking targeted follow-up questions based on the user\'s past product usage and stated reason for leaving. The result: rich qualitative intelligence auto-structured into dashboards, plus autonomous win-back negotiations.',
+		features: [
+			'Qualitative-to-Quantitative Mapping: Natural email conversations become structured churn analytics.',
+			'Autonomous Win-Back Offers: Agent negotiates retention discounts or pause options during the email thread.',
+			'Root-Cause Classification: Auto-categorises churn reasons with confidence scores.',
+			'Integration-ready: Works with Stripe, Chargebee, Recurly, and custom webhooks.',
+		],
+		accentColor: '#38bdf8',
+		icon: 'churn',
+	},
+	{
+		id: 'cashflow',
+		title: 'FreelancerCashFlow',
+		tagline: 'Your Complete AI-Powered Financial OS.',
+		description:
+			'A comprehensive financial operating system for freelancers and agencies that transforms unpredictable income into stabilised, forecasted cash flow. Syncs with invoicing, bank feeds, and payment systems; predicts payment risks; auto-chases receivables; and provides double-entry accounting with real-time dashboards.',
+		features: [
+			'Dashboard: Health score, net profit, budgets, runway, aging, trends.',
+			'Invoice Chasing: 5-stage AI escalation with late fee auto-calculation.',
+			'Income Volatility Index (IVI): Scores client payment risk.',
+			'Agentic Expense Guard: Suggests micro-reserves for slow quarters.',
+			'Double-Entry Accounting: Chart of accounts, balance sheet, journal, P&L reports.',
+			'Multi-Currency: 35 currencies with live exchange rates.',
+			'Bank Integration: CSV import + Plaid sync (configurable).',
+			'Contracts & Proposals: Full lifecycle from proposal to contract to invoice.',
+		],
+		accentColor: '#10b981',
+		icon: 'cashflow',
+	},
+	{
+		id: 'sandbox',
+		title: 'Custom AI Agents Sandbox',
+		tagline: 'Tailor-Built Micro-Agents for Specialized Operations.',
+		description:
+			'Scratch-built, LLM-backed workflows designed for your exact B2B operational bottleneck—invoice auditing, lead scoring, vendor management, or anything in between.',
+		features: [
+			'Built-to-order agents on demand.',
+			'Rapid deployment with plug-and-play integrations.',
+			'Fully auditable agent decision logs.',
+			'Local AI inference option (Ollama) for data privacy.',
+		],
+		accentColor: '#6366f1',
+		icon: 'sandbox',
+	},
+];
+---
+
+<section id="products" class="py-20 relative">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-16">
+			<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium text-[#38bdf8] bg-[#121826]/50 border border-[#334155]/50 mb-4">
+				Product Suite
+			</div>
+			<h2 class="text-3xl sm:text-4xl font-heading font-bold text-[#f1f5f9] mb-4">
+				Flagship Agentic Solutions
+			</h2>
+			<p class="text-[#94a3b8] max-w-2xl mx-auto">
+				Two distinct AI-agentic products solving critical problems for SaaS businesses and freelancers alike.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+			{products.map((product) => (
+				<div
+					class="bg-[#121826]/70 backdrop-blur-xl border border-[#334155]/50 rounded-xl transition-all duration-300 ease-out hover:translate-y-[-4px] hover:border-[#6366f1]/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]"
+				>
+					<div class="p-8">
+						<div class="flex items-center justify-between mb-4">
+							<div
+								class="w-12 h-12 rounded-lg flex items-center justify-center"
+								style={{ backgroundColor: product.accentColor + '20' }}
+							>
+								{product.icon === 'churn' && (
+									<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 7.5V3M12 3L9 6.75M12 3L15 6.75M15.75 12.75V19.5C15.75 20.3284 15.0784 21 14.25 21H5.25C4.4216 21 3.75 20.3284 3.75 19.5V8.25C3.75 7.4216 4.4216 6.75 5.25 6.75H14.25C15.0784 6.75 15.75 7.4216 15.75 8.25V12.75Z"
+											stroke={product.accentColor}
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								)}
+								{product.icon === 'cashflow' && (
+									<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M3 12a9 9 0 0 1 12.73-6.27M3 12v9a3 3 0 0 0 3 3h12M3 12l3 3m-3-3l3-3m3 3v-5.5m0 5.5l-3 3m3-3l3 3m-6 0h6m-6 0v5m6-5v5"
+											stroke={product.accentColor}
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								)}
+								{product.icon === 'sandbox' && (
+									<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 5.25L4.5 9v10.5c0 1.38.82 2.58 2.05 3.1l7.45 3.15c.27.11.55.16.83.16.28 0 .56-.05.83-.16l7.45-3.15c1.23-.52 2.05-1.72 2.05-3.1V9l-7.5-3.75z"
+											stroke={product.accentColor}
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										></path>
+									</svg>
+								)}
+							</div>
+							<span class="text-xs font-medium" style={{ color: product.accentColor }}>
+								{product.tagline}
+							</span>
+						</div>
+
+						<h3 class="text-2xl font-heading font-bold text-[#f1f5f9] mb-3">{product.title}</h3>
+						<p class="text-[#94a3b8] mb-4 text-sm leading-relaxed">{product.description}</p>
+
+						<ul class="space-y-3 mb-6">
+							{product.features.map((feature) => (
+								<li class="flex items-start gap-3">
+									<span class="text-[#10b981] mt-0.5 flex-shrink-0">
+										<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</span>
+									<span class="text-sm text-[#94a3b8]">{feature}</span>
+								</li>
+							))}
+						</ul>
+
+						{product.id === 'cashflow' ? (
+							<a
+								href="https://cashflow.metrictether.com"
+								class="block w-full text-center bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+							>
+								Go to App
+							</a>
+						) : product.id === 'sandbox' ? (
+							<a
+								href="#waitlist"
+								class="block w-full text-center border border-[#334155] text-[#f1f5f9] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:bg-[#1e293b] hover:border-[#6366f1]/30"
+							>
+								Pitch Your Bottleneck
+							</a>
+						) : (
+							<a
+								href="#waitlist"
+								class="block w-full text-center bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+							>
+								Learn More
+							</a>
+						)}
+					</div>
+
+					{product.id === 'churn' && (
+						<div class="bg-[#0b0f17]/50 border-t border-[#334155]/30 p-4">
+							<div class="text-xs text-[#64748b] font-mono mb-2">Live Preview:</div>
+							<div class="space-y-2">
+								<div class="bg-[#1e293b]/50 rounded p-2.5">
+									<div class="text-xs text-[#38bdf8] mb-1">🤖 Agent:</div>
+									<div class="text-xs text-[#94a3b8]">
+										"Hi there! I noticed you're leaving. Could you share what made you decide to cancel? Your feedback helps us improve."
+									</div>
+								</div>
+								<div class="bg-[#1e293b]/50 rounded p-2.5">
+									<div class="text-xs text-[#10b981] mb-1">👤 User:</div>
+									<div class="text-xs text-[#94a3b8]">"Pricing was too high compared to competitors."</div>
+								</div>
+								<div class="bg-[#1e293b]/50 rounded p-2.5">
+									<div class="text-xs text-[#38bdf8] mb-1">🤖 Agent:</div>
+									<div class="text-xs text-[#94a3b8]">
+										"I'd like to offer you a 30% discount on your next renewal, or a 3-month pause on your subscription. Which works better for you?"
+									</div>
+								</div>
+							</div>
+						</div>
+					)}
+
+					{product.id === 'cashflow' && (
+						<div class="bg-[#0b0f17]/50 border-t border-[#334155]/30 p-4">
+							<div class="text-xs text-[#64748b] font-mono mb-2">Volatility Index:</div>
+							<div class="h-24 relative">
+								<svg class="w-full h-full" viewBox="0 0 400 80" preserveAspectRatio="none">
+									<polyline
+										points="0,60 50,40 100,20 150,30 200,40 250,60 300,50 350,40 400,60"
+										fill="none"
+										stroke="rgba(244,63,92,0.8)"
+										stroke-width="1.5"
+									></polyline>
+									<polyline
+										points="0,70 80,65 160,50 240,55 320,45 400,45"
+										fill="none"
+										stroke="rgba(16,185,129,0.8)"
+										stroke-width="1.5"
+									></polyline>
+									<text x="5" y="15" class="fill-[#94a3b8] text-xs font-mono">Unstable ↗ Stabilized</text>
+								</svg>
+							</div>
+						</div>
+					)}
+				</div>
+			))}
+		</div>
+	</div>
+</section>

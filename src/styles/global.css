@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --font-body: 'Inter', ui-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', ui-sans, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, 'Courier New', monospace;
+
+  --color-primary-bg: #0b0f17;
+  --color-surface: #121826;
+  --color-surface-2: #1e293b;
+  --color-border: #334155;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-agentic-blue: #38bdf8;
+  --color-agentic-indigo: #6366f1;
+  --color-emerald: #10b981;
+  --color-crimson: #f43f5e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#0b0f17] text-[#94a3b8] font-body antialiased;
+    margin: 0;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "metrictether",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "4.3.0",
+    "astro": "^6.4.8",
+    "tailwindcss": "4.3.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/cloudflare": "^13.6.0",
+    "typescript": "^6.0.3",
+    "wrangler": "4.115.0"
+  },
+  "overrides": {
+    "undici": "7.28.0"
+  }
+}
