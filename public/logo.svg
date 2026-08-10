@@ -1,43 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#6366F1"/>
       <stop offset="100%" stop-color="#38BDF8"/>
     </linearGradient>
-    <linearGradient id="logo-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="logo-glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#10B981"/>
       <stop offset="100%" stop-color="#38BDF8"/>
     </linearGradient>
-    <filter id="logo-glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <rect width="512" height="512" rx="96" fill="#0B0F17"/>
+  <rect width="512" height="512" rx="112" fill="#0B0F17"/>
 
-  <circle cx="170" cy="170" r="56" fill="url(#logo-gradient)" filter="url(#logo-glow)"/>
-  <circle cx="170" cy="170" r="22" fill="#0B0F17"/>
+  <g transform="translate(112, 112) scale(1.8)">
+    <circle cx="80" cy="80" r="40" fill="url(#logo-gradient)" />
+    <circle cx="80" cy="80" r="16" fill="#0B0F17"/>
 
-  <path d="M170 226 L170 370" stroke="url(#logo-gradient)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M80 120 L80 200" stroke="url(#logo-gradient)" stroke-width="5" stroke-linecap="round"/>
 
-  <circle cx="170" cy="370" r="44" fill="url(#logo-emerald)" filter="url(#logo-glow)"/>
-  <circle cx="170" cy="370" r="18" fill="#0B0F17"/>
+    <circle cx="80" cy="200" r="30" fill="url(#logo-glow-grad)" />
+    <circle cx="80" cy="200" r="12" fill="#0B0F17"/>
 
-  <circle cx="342" cy="226" r="56" fill="#38BDF8" filter="url(#logo-glow)"/>
-  <circle cx="342" cy="226" r="24" fill="#0B0F17"/>
+    <circle cx="200" cy="120" r="40" fill="#38BDF8" />
+    <circle cx="200" cy="120" r="18" fill="#0B0F17"/>
 
-  <circle cx="342" cy="370" r="44" fill="#10B981" filter="url(#logo-glow)"/>
-  <circle cx="342" cy="370" r="18" fill="#0B0F17"/>
+    <circle cx="200" cy="200" r="30" fill="#10B981" />
+    <circle cx="200" cy="200" r="12" fill="#0B0F17"/>
 
-  <path d="M226 310 C252 300 260 340 286 340" stroke="url(#logo-emerald)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M110 180 C150 180 170 200 190 200" stroke="#38BDF8" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M130 170 C160 165 180 185 200 185" stroke="#10B981" stroke-width="3" fill="none" stroke-linecap="round"/>
 
-  <path d="M198 340 C220 332 227 368 248 375" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M230 190 L320 190" stroke="url(#logo-gradient)" stroke-width="4" stroke-linecap="round" stroke-dasharray="12,8"/>
 
-  <path d="M264 330 L420 330" stroke="url(#logo-gradient)" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,6"/>
-
-  <circle cx="420" cy="330" r="14" fill="url(#logo-emerald)" filter="url(#logo-glow)"/>
+    <circle cx="320" cy="190" r="16" fill="url(#logo-glow-grad)" />
+  </g>
 </svg>
