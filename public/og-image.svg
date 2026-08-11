@@ -6,28 +6,28 @@
       <stop offset="100%" stop-color="#38BDF8"/>
     </linearGradient>
   </defs>
-  <rect x="80" y="180" width="1040" height="270" rx="24" fill="#121826" stroke="#334155"/>
-  <rect x="80" y="180" width="1040" height="270" rx="24" fill="url(#brand-gradient)" fill-opacity="0.05"/>
+  <rect x="80" y="160" width="1040" height="310" rx="24" fill="#121826" stroke="#334155"/>
+  <rect x="80" y="160" width="1040" height="310" rx="24" fill="url(#brand-gradient)" fill-opacity="0.05"/>
 
-  <text x="600" y="300" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="800" font-size="56" fill="#F1F5F9" letter-spacing="-0.5">
+  <text x="600" y="280" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="800" font-size="56" fill="#F1F5F9" letter-spacing="-0.5">
     MetricTether
   </text>
-  <text x="600" y="360" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="24" fill="#94A3B8">
-    Intelligent Software & Agentic Workflows
+  <text x="600" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="24" fill="#94A3B8">
+    AI Agents for SaaS Churn Recovery
   </text>
-  <text x="600" y="410" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="20" fill="#64748B">
-    for Modern Businesses
+  <text x="600" y="396" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="24" fill="#94A3B8">
+    &amp; Freelancer Cash Flow
   </text>
 
-  <circle cx="920" cy="490" r="6" fill="#10B981"/>
-  <text x="932" y="496" font-family="Inter, sans-serif" font-size="14" fill="#64748B">
+  <circle cx="920" cy="520" r="6" fill="#10B981"/>
+  <text x="932" y="526" font-family="Inter, sans-serif" font-size="14" fill="#64748B">
     All systems operational
   </text>
 
-  <circle cx="120" cy="490" r="24" fill="#38BDF8" fill-opacity="0.15"/>
-  <path d="M120 470 C134 470 144 480 144 494 M144 494 C144 508 134 518 120 518 C106 518 96 508 96 494 C96 480 106 470 120 470 Z" stroke="#38BDF8" stroke-width="1.5" fill="none"/>
-  <text x="120" y="540" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Agentic</text>
-  <text x="600" y="540" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B">·</text>
-  <text x="60" y="540" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B" transform="rotate(-10 60 540)">AI</text>
-  <text x="180" y="540" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Workflows</text>
+  <circle cx="120" cy="520" r="24" fill="#38BDF8" fill-opacity="0.15"/>
+  <path d="M120 500 C134 500 144 510 144 524 M144 524 C144 538 134 548 120 548 C106 548 96 538 96 524 C96 510 106 500 120 500 Z" stroke="#38BDF8" stroke-width="1.5" fill="none"/>
+  <text x="120" y="570" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Agentic</text>
+  <text x="600" y="570" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B">·</text>
+  <text x="60" y="570" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B" transform="rotate(-10 60 570)">AI</text>
+  <text x="180" y="570" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Workflows</text>
 </svg>

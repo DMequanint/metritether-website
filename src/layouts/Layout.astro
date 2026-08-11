@@ -10,29 +10,33 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href="https://metrictether.com/" />
+		<meta name="theme-color" content="#0b0f17" />
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="MetricTether" />
+		<meta property="og:url" content="https://metrictether.com/" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://metrictether.com" />
-		<meta property="og:image" content="/og-image.svg" />
+		<meta property="og:image" content="https://metrictether.com/og-image.png" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="MetricTether — AI Agents for SaaS Churn Recovery & Freelancer Cash Flow" />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content="/og-image.svg" />
+		<meta name="twitter:image" content="https://metrictether.com/og-image.png" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,6 +48,12 @@ const {
 		<script is:inline defer data-domain="metrictether.com" src="https://plausible.io/js/script.js"></script>
 	</head>
 	<body class="min-h-screen flex flex-col bg-[#0b0f17] text-[#94a3b8] font-body antialiased">
+		<a
+			href="#main"
+			class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-[#38bdf8] focus:px-4 focus:py-2 focus:font-heading focus:text-sm focus:font-semibold focus:text-[#0b0f17]"
+		>
+			Skip to content
+		</a>
 		<slot />
 	</body>
 </html>

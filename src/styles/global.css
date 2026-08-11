@@ -28,4 +28,9 @@
     @apply bg-[#0b0f17] text-[#94a3b8] font-body antialiased;
     margin: 0;
   }
+
+  :focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+  }
 }
