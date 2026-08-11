@@ -1,63 +1,63 @@
 ---
 ---
 
-<section id="waitlist" class="py-20 relative">
-	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-12">
-			<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium text-[#38bdf8] bg-[#121826]/50 border border-[#334155]/50 mb-4">
+<section id="waitlist" class="relative py-20 sm:py-28">
+	<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+		<div class="mx-auto mb-12 max-w-2xl text-center">
+			<span class="inline-flex items-center gap-2 rounded-full border border-[#334155]/60 bg-[#121826]/60 px-3 py-1 text-xs font-medium text-[#38bdf8]">
 				Early Access
-			</div>
-			<h2 class="text-3xl sm:text-4xl font-heading font-bold text-[#f1f5f9] mb-4">
+			</span>
+			<h2 class="mt-4 font-heading text-3xl font-bold text-[#f1f5f9] sm:text-4xl">
 				Request Early Access
 			</h2>
-			<p class="text-[#94a3b8] max-w-2xl mx-auto">
+			<p class="mt-4 text-[#94a3b8]">
 				Sign up for early access to Churn Analytics and FreelancerCashFlow.
 			</p>
 		</div>
 
-		<div class="bg-[#121826]/50 border border-[#334155]/50 rounded-xl p-6 sm:p-8">
+		<div class="rounded-2xl border border-[#334155]/50 bg-[#121826]/60 p-6 sm:p-8">
 			<form
 				action="https://formspree.io/f/maypwjnv"
 				method="POST"
-				class="space-y-6"
 				id="waitlist-form"
+				class="space-y-6"
 			>
 				<input type="hidden" name="form-name" value="waitlist" />
 				<input type="hidden" name="_next" value="https://metrictether.com#waitlist-success" />
 
-				<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+				<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
 					<div>
-						<label for="name" class="block text-sm font-medium text-[#94a3b8] mb-1">Name</label>
+						<label for="name" class="mb-1 block text-sm font-medium text-[#94a3b8]">Name</label>
 						<input
 							type="text"
 							id="name"
 							name="name"
 							required
-							class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] placeholder-[#64748b] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors"
 							placeholder="Jane Doe"
+							class="w-full rounded-lg border border-[#334155]/50 bg-[#0b0f17]/50 px-4 py-2.5 text-[#f1f5f9] placeholder-[#64748b] transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-1 focus:ring-[#38bdf8]/30"
 						/>
 					</div>
 
 					<div>
-						<label for="email" class="block text-sm font-medium text-[#94a3b8] mb-1">Email Address</label>
+						<label for="email" class="mb-1 block text-sm font-medium text-[#94a3b8]">Email Address</label>
 						<input
 							type="email"
 							id="email"
 							name="_replyto"
 							required
-							class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] placeholder-[#64748b] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors"
 							placeholder="jane@company.com"
+							class="w-full rounded-lg border border-[#334155]/50 bg-[#0b0f17]/50 px-4 py-2.5 text-[#f1f5f9] placeholder-[#64748b] transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-1 focus:ring-[#38bdf8]/30"
 						/>
 					</div>
 				</div>
 
 				<div>
-					<label for="interest" class="block text-sm font-medium text-[#94a3b8] mb-1">Primary Interest</label>
+					<label for="interest" class="mb-1 block text-sm font-medium text-[#94a3b8]">Primary Interest</label>
 					<select
 						id="interest"
 						name="interest"
 						required
-						class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors"
+						class="w-full rounded-lg border border-[#334155]/50 bg-[#0b0f17]/50 px-4 py-2.5 text-[#f1f5f9] transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-1 focus:ring-[#38bdf8]/30"
 					>
 						<option value="" disabled selected>Select a product</option>
 						<option value="Churn Analytics">Churn Analytics — AI Email Interviewer</option>
@@ -67,27 +67,27 @@
 				</div>
 
 				<div>
-					<label for="bottleneck" class="block text-sm font-medium text-[#94a3b8] mb-1">
+					<label for="bottleneck" class="mb-1 block text-sm font-medium text-[#94a3b8]">
 						What is your biggest operational or financial bottleneck?
 					</label>
 					<textarea
 						id="bottleneck"
 						name="bottleneck"
 						rows="3"
-						class="w-full px-4 py-2.5 bg-[#0b0f17]/50 border border-[#334155]/50 rounded-lg text-[#f1f5f9] placeholder-[#64748b] focus:outline-none focus:border-[#38bdf8] focus:ring-1 focus:ring-[#38bdf8]/30 transition-colors resize-y"
 						placeholder="e.g. Late payments from 30% of clients, or churn rate above 8% monthly..."
+						class="w-full resize-y rounded-lg border border-[#334155]/50 bg-[#0b0f17]/50 px-4 py-2.5 text-[#f1f5f9] placeholder-[#64748b] transition-colors focus:border-[#38bdf8] focus:outline-none focus:ring-1 focus:ring-[#38bdf8]/30"
 					></textarea>
 				</div>
 
 				<div class="flex items-start gap-3">
-					<div class="flex-shrink-0 mt-0.5">
+					<div class="mt-0.5 shrink-0">
 						<input
 							type="checkbox"
 							id="consent"
 							name="consent"
 							value="yes"
 							required
-							class="w-4 h-4 rounded bg-[#0b0f17]/50 border-[#334155]/50 text-[#38bdf8] focus:ring-[#38bdf8]/30"
+							class="h-4 w-4 rounded border-[#334155]/50 bg-[#0b0f17]/50 text-[#38bdf8] focus:ring-[#38bdf8]/30"
 						/>
 					</div>
 					<label for="consent" class="text-sm text-[#94a3b8]">
@@ -97,18 +97,18 @@
 
 				<button
 					type="submit"
-					class="w-full bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(99,102,241,0.4)]"
+					class="w-full rounded-lg bg-gradient-to-r from-[#6366f1] to-[#38bdf8] py-3 font-heading text-base font-semibold text-[#0b0f17] transition-transform duration-200 hover:scale-[1.02]"
 				>
 					Request Access
 				</button>
 			</form>
 
-			<div id="waitlist-success" class="hidden text-center py-8">
-				<svg class="w-12 h-12 mx-auto text-[#10b981] mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+			<div id="waitlist-success" class="hidden py-8 text-center">
+				<svg class="mx-auto mb-4 h-12 w-12 text-[#10b981]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
-				<h3 class="text-xl font-heading font-bold text-[#f1f5f9] mb-2">Thanks for joining!</h3>
-				<p class="text-[#94a3b8]">We'll be in touch soon with early access details.</p>
+				<h3 class="font-heading text-xl font-bold text-[#f1f5f9]">Thanks for joining!</h3>
+				<p class="mt-2 text-[#94a3b8]">We'll be in touch soon with early access details.</p>
 			</div>
 		</div>
 	</div>
@@ -117,9 +117,8 @@
 <script>
 	const form = document.getElementById('waitlist-form');
 	const success = document.getElementById('waitlist-success');
-	const hash = window.location.hash;
 
-	if (hash === '#waitlist-success' && success) {
+	if (window.location.hash === '#waitlist-success' && success) {
 		form?.classList.add('hidden');
 		success.classList.remove('hidden');
 		window.history.replaceState(null, '', '#waitlist');

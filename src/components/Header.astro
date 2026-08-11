@@ -2,69 +2,60 @@
 ---
 
 <header
-	class="fixed top-0 left-0 right-0 z-50 bg-[#0b0f17]/80 backdrop-blur-sm border-b border-[#334155]/50 transition-all duration-300"
 	id="header"
+	class="fixed inset-x-0 top-0 z-50 border-b border-[#334155]/40 bg-[#0b0f17]/80 backdrop-blur-sm"
 >
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="flex items-center justify-between h-16">
-			<div class="flex-shrink-0 flex items-center space-x-2">
-					<img src="/logo.svg" alt="MetricTether" class="w-8 h-8" />
-					<span class="text-xl font-heading font-bold text-[#f1f5f9]">MetricTether</span>
-				</div>
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="flex h-16 items-center justify-between">
+			<a href="/" class="flex items-center gap-2" aria-label="MetricTether home">
+				<img src="/logo.svg" alt="MetricTether logo" class="h-8 w-8" />
+				<span class="font-heading text-xl font-bold text-[#f1f5f9]">MetricTether</span>
+			</a>
 
-			<nav class="hidden md:flex space-x-8">
-				<a
-					href="#products"
-					class="text-[#94a3b8] hover:text-[#38bdf8] transition-colors duration-200 font-medium"
-				>Products</a>
-				<a
-					href="#how-it-works"
-					class="text-[#94a3b8] hover:text-[#38bdf8] transition-colors duration-200 font-medium"
-				>How It Works</a>
+			<nav class="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+				<a href="#products" class="text-sm font-medium text-[#94a3b8] transition-colors hover:text-[#38bdf8]">
+					Products
+				</a>
+				<a href="#how-it-works" class="text-sm font-medium text-[#94a3b8] transition-colors hover:text-[#38bdf8]">
+					How It Works
+				</a>
 			</nav>
 
 			<div class="hidden md:block">
 				<a
 					href="#waitlist"
-					class="bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2 px-5 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(99,102,241,0.4)]"
+					class="rounded-lg bg-gradient-to-r from-[#6366f1] to-[#38bdf8] px-5 py-2 font-heading text-sm font-semibold text-[#0b0f17] transition-transform duration-200 hover:scale-[1.02]"
 				>
 					Request Early Access
 				</a>
 			</div>
 
-			<div class="md:hidden">
-				<button
-					id="mobile-menu-button"
-					class="text-[#94a3b8] hover:text-[#f1f5f9] focus:outline-none"
-					aria-label="Toggle navigation menu"
-				>
-					<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-					</svg>
-				</button>
-			</div>
+			<button
+				id="mobile-menu-button"
+				class="text-[#94a3b8] hover:text-[#f1f5f9] md:hidden"
+				aria-label="Toggle navigation menu"
+				aria-expanded="false"
+				aria-controls="mobile-menu"
+			>
+				<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
 		</div>
 	</div>
 
-	<div
-		id="mobile-menu"
-		class="md:hidden hidden border-t border-[#334155]/30 bg-[#121826]"
-	>
-		<div class="px-2 pt-2 pb-3 space-y-1">
-			<a
-				href="#products"
-				class="block px-3 py-2 text-[#94a3b8] hover:text-[#38bdf8] transition-colors duration-200 font-medium"
-				>Products</a
-			>
-			<a
-				href="#how-it-works"
-				class="block px-3 py-2 text-[#94a3b8] hover:text-[#38bdf8] transition-colors duration-200 font-medium"
-				>How It Works</a
-			>
+	<div id="mobile-menu" class="hidden border-t border-[#334155]/40 bg-[#121826] md:hidden">
+		<div class="space-y-1 px-2 py-3">
+			<a href="#products" class="block rounded-md px-3 py-2 text-sm font-medium text-[#94a3b8] hover:text-[#38bdf8]">
+				Products
+			</a>
+			<a href="#how-it-works" class="block rounded-md px-3 py-2 text-sm font-medium text-[#94a3b8] hover:text-[#38bdf8]">
+				How It Works
+			</a>
 			<a
 				href="#waitlist"
-				class="block mx-3 mt-2 text-center bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2 px-4 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02]"
-				>
+				class="mx-3 mt-2 block rounded-lg bg-gradient-to-r from-[#6366f1] to-[#38bdf8] py-2 text-center font-heading text-sm font-semibold text-[#0b0f17]"
+			>
 				Request Early Access
 			</a>
 		</div>
@@ -77,7 +68,8 @@
 
 	if (menuButton && menu) {
 		menuButton.addEventListener('click', () => {
-			menu.classList.toggle('hidden');
+			const isHidden = menu.classList.toggle('hidden');
+			menuButton.setAttribute('aria-expanded', String(!isHidden));
 		});
 	}
 
