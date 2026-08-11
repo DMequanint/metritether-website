@@ -13,14 +13,14 @@ const products: Product[] = [
 	{
 		id: 'churn',
 		title: 'Churn Analytics',
-		tagline: 'Turn Exit Surveys into Conversational Insights.',
+		tagline: 'Conversational exit interviews for SaaS churn.',
 		description:
-			'An autonomous AI interviewer agent triggers upon customer cancellation in SaaS and subscription businesses. It sends personalised, context-aware email replies asking targeted follow-up questions based on the user\'s past product usage and stated reason for leaving. The result: rich qualitative intelligence auto-structured into dashboards, plus autonomous win-back negotiations.',
+			'An AI interviewer agent triggers when a customer cancels a SaaS or subscription plan. It emails personalised, context-aware follow-up questions based on the customer\'s past product usage and stated reason for leaving. The responses are auto-structured into churn dashboards, and the agent can negotiate win-back offers directly in the email thread.',
 		features: [
-			'Qualitative-to-Quantitative Mapping: Natural email conversations become structured churn analytics.',
-			'Autonomous Win-Back Offers: Agent negotiates retention discounts or pause options during the email thread.',
-			'Root-Cause Classification: Auto-categorises churn reasons with confidence scores.',
-			'Integration-ready: Works with Stripe, Chargebee, Recurly, and custom webhooks.',
+			'Conversational churn interviews: email threads become structured churn analytics.',
+			'Win-back offers: the agent can propose retention discounts or pause options during the thread.',
+			'Root-cause classification: churn reasons auto-categorised with confidence scores.',
+			'Integrations: Stripe, Chargebee, Recurly, and custom webhooks.',
 		],
 		accentColor: '#38bdf8',
 		icon: 'churn',
@@ -28,9 +28,9 @@ const products: Product[] = [
 	{
 		id: 'cashflow',
 		title: 'FreelancerCashFlow',
-		tagline: 'Your Complete AI-Powered Financial OS.',
+		tagline: 'Forecasting and receivable automation for freelancers.',
 		description:
-			'A comprehensive financial operating system for freelancers and agencies that transforms unpredictable income into stabilised, forecasted cash flow. Syncs with invoicing, bank feeds, and payment systems; predicts payment risks; auto-chases receivables; and provides double-entry accounting with real-time dashboards.',
+			'A financial operating system for freelancers and agencies that forecasts cash flow, predicts payment risk, and automates invoice chasing. It syncs with invoicing, bank feeds, and payment systems, and provides double-entry accounting with real-time dashboards.',
 		features: [
 			'Dashboard: Health score, net profit, budgets, runway, aging, trends.',
 			'Invoice Chasing: 5-stage AI escalation with late fee auto-calculation.',
@@ -47,9 +47,9 @@ const products: Product[] = [
 	{
 		id: 'sandbox',
 		title: 'Custom AI Agents Sandbox',
-		tagline: 'Tailor-Built Micro-Agents for Specialized Operations.',
+		tagline: 'Custom AI agents for specific operations.',
 		description:
-			'Scratch-built, LLM-backed workflows designed for your exact B2B operational bottleneck—invoice auditing, lead scoring, vendor management, or anything in between.',
+			'Built-to-order, LLM-backed workflows designed for a specific operational bottleneck—invoice auditing, lead scoring, vendor management, or anything in between.',
 		features: [
 			'Built-to-order agents on demand.',
 			'Rapid deployment with plug-and-play integrations.',
@@ -66,22 +66,22 @@ const products: Product[] = [
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-16">
 			<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium text-[#38bdf8] bg-[#121826]/50 border border-[#334155]/50 mb-4">
-				Product Suite
+				Products
 			</div>
 			<h2 class="text-3xl sm:text-4xl font-heading font-bold text-[#f1f5f9] mb-4">
-				Flagship Agentic Solutions
+				Our Products
 			</h2>
 			<p class="text-[#94a3b8] max-w-2xl mx-auto">
-				Two distinct AI-agentic products solving critical problems for SaaS businesses and freelancers alike.
+				Three products for SaaS businesses and freelancers.
 			</p>
 		</div>
 
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 			{products.map((product) => (
 				<div
-					class="bg-[#121826]/70 backdrop-blur-xl border border-[#334155]/50 rounded-xl transition-all duration-300 ease-out hover:translate-y-[-4px] hover:border-[#6366f1]/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]"
+					class="flex flex-col bg-[#121826]/70 backdrop-blur-xl border border-[#334155]/50 rounded-xl transition-all duration-300 ease-out hover:translate-y-[-4px] hover:border-[#6366f1]/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]"
 				>
-					<div class="p-8">
+					<div class="p-8 flex flex-col flex-1">
 						<div class="flex items-center justify-between mb-4">
 							<div
 								class="w-12 h-12 rounded-lg flex items-center justify-center"
@@ -129,7 +129,7 @@ const products: Product[] = [
 						<h3 class="text-2xl font-heading font-bold text-[#f1f5f9] mb-3">{product.title}</h3>
 						<p class="text-[#94a3b8] mb-4 text-sm leading-relaxed">{product.description}</p>
 
-						<ul class="space-y-3 mb-6">
+						<ul class="space-y-3 mb-6 flex-1">
 							{product.features.map((feature) => (
 								<li class="flex items-start gap-3">
 									<span class="text-[#10b981] mt-0.5 flex-shrink-0">
@@ -145,21 +145,21 @@ const products: Product[] = [
 						{product.id === 'cashflow' ? (
 							<a
 								href="https://cashflow.metrictether.com"
-								class="block w-full text-center bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+								class="mt-auto block w-full text-center bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
 							>
 								Go to App
 							</a>
 						) : product.id === 'sandbox' ? (
 							<a
 								href="#waitlist"
-								class="block w-full text-center border border-[#334155] text-[#f1f5f9] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:bg-[#1e293b] hover:border-[#6366f1]/30"
+								class="mt-auto block w-full text-center border border-[#334155] text-[#f1f5f9] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:bg-[#1e293b] hover:border-[#6366f1]/30"
 							>
 								Pitch Your Bottleneck
 							</a>
 						) : (
 							<a
 								href="#waitlist"
-								class="block w-full text-center bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+								class="mt-auto block w-full text-center bg-gradient-to-r from-[#6366f1] to-[#38bdf8] text-[#0b0f17] font-heading font-semibold py-2.5 px-4 rounded-lg transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
 							>
 								Learn More
 							</a>
