@@ -24,6 +24,17 @@
     scroll-padding-top: 5rem;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
     @apply bg-[#0b0f17] text-[#94a3b8] font-body antialiased;
     margin: 0;

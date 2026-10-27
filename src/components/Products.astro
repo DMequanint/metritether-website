@@ -117,6 +117,47 @@ const products: Product[] = [
 					<p class="mt-1 text-xs font-medium" style={{ color: product.accentColor }}>{product.tagline}</p>
 					<p class="mt-3 text-sm leading-relaxed text-[#94a3b8]">{product.description}</p>
 
+					{product.icon === 'churn' && (
+						<div class="mt-4 rounded-lg border border-[#334155]/40 bg-[#0b0f17]/40 p-3 text-xs">
+							<div class="flex items-start gap-2">
+								<span class="shrink-0 rounded bg-[#6366f1]/20 px-1.5 py-0.5 font-mono text-[10px] text-[#38bdf8]">AI</span>
+								<p class="text-[#94a3b8]">Hi Alex — saw you cancelled. Was it pricing or missing features?</p>
+							</div>
+							<div class="mt-2 flex items-start justify-end gap-2">
+								<p class="rounded bg-[#1e293b] px-2 py-1 text-[#f1f5f9]">Mostly pricing for our team size.</p>
+							</div>
+							<div class="mt-2 flex items-start gap-2">
+								<span class="shrink-0 rounded bg-[#6366f1]/20 px-1.5 py-0.5 font-mono text-[10px] text-[#38bdf8]">AI</span>
+								<p class="text-[#94a3b8]">Offering 20% off for 3 months. Want to pause instead?</p>
+							</div>
+						</div>
+					)}
+					{product.icon === 'cashflow' && (
+						<div class="mt-4 rounded-lg border border-[#334155]/40 bg-[#0b0f17]/40 p-3">
+							<svg class="h-20 w-full" viewBox="0 0 200 80" preserveAspectRatio="none">
+								<defs>
+									<linearGradient id="cf-grad" x1="0" y1="0" x2="0" y2="1">
+										<stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+										<stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+									</linearGradient>
+								</defs>
+								<path d="M0 60 L20 55 L40 62 L60 48 L80 50 L100 38 L120 42 L140 30 L160 34 L180 22 L200 26 L200 80 L0 80 Z" fill="url(#cf-grad)" />
+								<path d="M0 60 L20 55 L40 62 L60 48 L80 50 L100 38 L120 42 L140 30 L160 34 L180 22 L200 26" fill="none" stroke="#10b981" stroke-width="2" />
+								<path d="M0 70 L200 70" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
+							</svg>
+							<div class="mt-1 flex justify-between text-[10px] font-mono text-[#64748b]">
+								<span>30d</span><span>60d</span><span>90d</span>
+							</div>
+						</div>
+					)}
+					{product.icon === 'sandbox' && (
+						<div class="mt-4 rounded-lg border border-[#334155]/40 bg-[#0b0f17]/40 p-3 font-mono text-[10px] text-[#94a3b8]">
+							<div><span class="text-[#38bdf8]">$</span> build agent --workflow=invoice-audit</div>
+							<div class="text-[#10b981]">✓ agent deployed · 3 tools wired</div>
+							<div class="text-[#64748b]">logs: /audit/2026-10-27/run-0142</div>
+						</div>
+					)}
+
 					<ul class="mt-6 flex-1 space-y-3">
 						{product.features.map((feature) => (
 							<li class="flex items-start gap-3 text-sm text-[#94a3b8]">
